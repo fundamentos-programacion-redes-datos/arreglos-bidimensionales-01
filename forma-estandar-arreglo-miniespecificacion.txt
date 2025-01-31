@@ -1,0 +1,32 @@
+1.  Inicio
+2.  // Declaración de variables
+3.  (notas(3)(4), d[0-n])   // Matriz de 3 filas (estudiantes) y 4 columnas (notas)
+4.  (promedios(3), d[0-n])  // Arreglo unidimensional para almacenar los promedios
+5.  estudiante, i[0-2]      // Contador para recorrer filas (estudiantes)
+6.  nota, i[0-3]           // Contador para recorrer columnas (notas)
+7.  suma, d[0-n]           // Acumulador para la suma de notas de un estudiante
+8.  
+9.  // Ingreso de notas por teclado
+10. Para (estudiante <-- 0, estudiante < 3, 1) entonces
+11.     Para (nota <-- 0, nota < 4, 1) entonces
+12.         // Se usa (nota + 1) y (estudiante + 1) porque los índices inician en 0
+13.         Escribir "Ingrese la nota " + (nota + 1) + " del estudiante " + (estudiante + 1) + ":"
+14.         Leer notas[estudiante][nota]   // Captura las notas en la matriz
+15.     Fin Para
+16. Fin Para
+17.  
+18. // Cálculo del promedio por estudiante y almacenamiento en el arreglo promedios
+19. Para (estudiante <-- 0, estudiante < 3, 1) entonces
+20.     suma <-- 0   // Reinicia el acumulador de suma por cada estudiante
+21.     Para (nota <-- 0, nota < 4, 1) entonces
+22.         suma <-- suma + notas[estudiante][nota]  // Suma todas las notas del estudiante
+23.     Fin Para
+24.     promedios[estudiante] <-- suma / 4   // Guarda el promedio en el arreglo
+25. Fin Para
+26.  
+27. // Mostrar los promedios almacenados en el arreglo promedios
+28. Escribir "Promedios de los estudiantes:"
+29. Para (estudiante <-- 0, estudiante < 3, 1) entonces
+30.     Escribir "El promedio del estudiante " + (estudiante + 1) + " es: " + promedios[estudiante]
+31. Fin Para
+32. Fin

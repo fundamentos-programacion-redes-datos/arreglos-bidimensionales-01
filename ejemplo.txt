@@ -1,0 +1,37 @@
+"""
+Genere una solución que permita ingresar por teclado valores de tipo entero a un arreglo. El tamaño del arreglo debe ser ingresado por teclado. Los valores permitidos son aquellos que están comprendidos entre el número 20 y los menores o iguales a 40; si se ingresa un valor fuera del rango, se debe asumir un valor de 100 por defecto. Finalmente presentar los valores ingresados, haciendo uso de una variable de tipo cadena acumuladora.
+
+"""
+1.  Inicio
+2.  // Declaración de variables
+3.  tamanio, i[1-n]               // Variable para almacenar el tamaño del arreglo
+4.  Escribir "Ingrese el tamaño del arreglo:"
+5.  Leer tamanio                   // Se captura el tamaño del arreglo desde el teclado
+6.  
+7.  (numeros(tamanio), i[0-n])      // Declaración del arreglo con el tamaño ingresado
+8.  indice, i[0-n]                 // Contador para recorrer el arreglo
+9.  valoresIngresados, x(100)[{a-z}, {A-Z}, {0-9}, {, }, {BS}]  // Acumulador de cadena
+10.  
+11. // Ingresar valores en el arreglo con validación
+12. Para (indice <-- 0, indice < tamanio, 1) entonces
+13.     Escribir "Ingrese un número para la posición " + (indice + 1) + ":"
+14.     Leer numeros[indice]   // Captura el valor ingresado por el usuario
+15.     
+16.     // Verificación del rango permitido
+17.     Si numeros[indice] >= 20 and numeros[indice] <= 40 entonces
+18.         // El número está dentro del rango permitido, no se hace nada
+19.     De lo contrario
+20.         numeros[indice] <-- 100   // Asignación de valor por defecto
+21.     Fin Si
+22. Fin Para
+23.  
+24. // Agregar los valores a la cadena acumuladora
+25. valoresIngresados <-- "Valores ingresados: \n"
+26. Para (indice <-- 0, indice < tamanio, 1) entonces
+27.     // Se agrega valores a la cadena, manteniendo lo que ya existía
+28.     valoresIngresados <-- valoresIngresados + numeros[indice] + "\n"
+29. Fin Para
+30.  
+31. // Mostrar los resultados
+32. Escribir valoresIngresados
+33. Fin
